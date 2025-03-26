@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão Escolar</title>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Tabela dos alunos</h1>
+
+
+    <h2>Gerenciar Alunos</h2>
+    <form id="adicionarAlunoForm">
+    <input type="text" id="nomeAluno" placeholder="Nome do Aluno" required>
+    <input type="number" id="nascimentoAluno" placeholder="Data de nascimento" required>
+    <button type="submit">Adicionar Aluno</button>
+    </form>
+
+    <form id="atualizarAlunoForm">
+    <input type="number" id="idAlunoAtualizar" placeholder="ID do Aluno" required>
+    <input type="text" id="nomeAlunoAtualizar" placeholder="Novo Nome">
+    <input type="number" id="nascimentoAlunoAtualizar" placeholder="Atualizar data de nascimento">
+    <button type="submit">Atualizar Aluno</button>
+    </form>
+
+    <form id="removerAlunoForm">
+    <input type="number" id="idAlunoRemover" placeholder="ID do Aluno" required>
+    <button type="submit">Remover Aluno</button>
+    </form>
+
+    <h2>Alunos</h2>
+    <button onclick="fetchAlunos()">Carregar Alunos</button>
+    <ul id="alunos"></ul>
+
+    <hr>
+
+    <h2>Gerenciar Professores</h2>
+    <form id="adicionarProfessorForm">
+    <input type="text" id="nomeProfessor" placeholder="Nome do Professor" required>
+    <input type="text" id="nascimentoProfessor" placeholder="Data de nascimento" required>
+    <button type="submit">Adicionar Professor</button>
+    </form>
+
+    <form id="atualizarProfessorForm">
+    <input type="number" id="idProfessorAtualizar" placeholder="ID do Professor" required>
+    <input type="text" id="nomeProfessorAtualizar" placeholder="Novo Nome">
+    <input type="text" id="nascimentoProfessorAtualizar" placeholder="Data de nascimento">
+    <button type="submit">Atualizar Professor</button>
+    </form>
+
+    <form id="removerProfessorForm">
+    <input type="number" id="idProfessorRemover" placeholder="ID do Professor" required>
+    <button type="submit">Remover Professor</button>
+    </form>
+
+    <h2>Professores</h2>
+    <button onclick="fetchProfessores()">Carregar Professores</button>
+    <ul id="professores"></ul>
+
+    <hr>
+
+  <h2>Gerenciar Disciplinas</h2>
+  <form id="adicionarDisciplinaForm">
+    <input type="text" id="nomeDisciplina" placeholder="Nome da Disciplina" required>
+    <input type="number" id="idProfessorDisciplina" placeholder="ID do Professor" required>
+    <button type="submit">Adicionar Disciplina</button>
+  </form>
+
+  <form id="atualizarDisciplinaForm">
+    <input type="number" id="idDisciplinaAtualizar" placeholder="ID da Disciplina" required>
+    <input type="text" id="nomeDisciplinaAtualizar" placeholder="Novo Nome">
+    <input type="number" id="idProfessorDisciplinaAtualizar" placeholder="Novo ID do Professor">
+    <button type="submit">Atualizar Disciplina</button>
+  </form>
+
+  <form id="removerDisciplinaForm">
+    <input type="number" id="idDisciplinaRemover" placeholder="ID da Disciplina" required>
+    <button type="submit">Remover Disciplina</button>
+  </form>
+
+  <h2>Disciplinas</h2>
+  <button onclick="fetchDisciplinas()">Carregar Disciplinas</button>
+  <ul id="disciplinas"></ul> 
+
+  <hr>
+
+<h2>Gerenciar Boletins</h2>
+<form id="adicionarBoletimForm">
+<input type="number" id="idAlunoBoletim" placeholder="ID do Aluno" required>
+<input type="number" id="idDisciplinaBoletim" placeholder="ID da Disciplina" required>
+<input type="text" id="notaBoletim" placeholder="Nota">
+<input type="text" id="semestreBoletim" placeholder="Semestre">
+<input type="number" id="anoBoletim" placeholder="Ano">
+<button type="submit">Adicionar Boletim</button>
+</form>
+
+<form id="atualizarBoletimForm">
+<input type="number" id="idBoletimAtualizar" placeholder="ID do Boletim" required>
+<input type="number" id="idAlunoBoletimAtualizar" placeholder="Novo ID do Aluno" required>
+<input type="number" id="idDisciplinaBoletimAtualizar" placeholder="Novo ID da Disciplina" required>
+<input type="number" id="notaBoletimAtualizar" placeholder="Nova Nota">
+<input type="text" id="semestreBoletimAtualizar" placeholder="Semestre">
+<input type="number" id="anoBoletimAtualizar" placeholder="Ano">
+<button type="submit">Atualizar Boletim</button>
+</form>
+
+<form id="removerBoletimForm">
+<input type="number" id="idBoletimRemover" placeholder="ID do Boletim" required>
+<button type="submit">Remover Boletim</button>
+</form>
+
+<h2>Boletins</h2>
+<button onclick="fetchBoletins()">Carregar Boletins</button>
+<ul id="boletins"></ul>
+
+</body>
+</html>
